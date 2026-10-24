@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة خاصة 💌</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- الظرف المغلق -->
+        <div class="envelope-wrapper" id="envelope" onclick="openEnvelopePrompt()">
+            <div class="envelope">
+                <div class="front">
+                    <div class="heart-seal">❤️</div>
+                </div>
+            </div>
+            <p class="hint-text">اضغطي على الظرف لفتحه 💌</p>
+        </div>
+
+        <!-- نافذة إدخال الرمز السري -->
+        <div id="passcode-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>أدخلي الرمز السري 🔐</h3>
+                <input type="password" id="passcode" placeholder="أدخلي الرمز هنا..." maxlength="6">
+                <button onclick="checkPasscode()">فتح الرسالة ✨</button>
+                <p id="error-msg" class="error"></p>
+                <button class="close-modal" onclick="closeModal()">إلغاء ❌</button>
+            </div>
+        </div>
+
+        <!-- ورقة الرسالة السرية (تخرج من الظرف) -->
+        <div id="message-screen" class="letter-window hidden">
+            <div class="letter-paper">
+                <h2>إلى حبيبتي... 🤍</h2>
+                <div class="message-text">
+                    <p>
+                         إلى حبيبتي<br>
+                        إلى العذبة الحنون<br><br>
+                        إلى التي ما مرّت على قلبي إلا ونزلت فيه نزول الأبد، واستقرّت فيه استقرار الشيء الذي يعرف موضعه عند اليد.<br>
+                        أحبكِ كما يُحب "الجمّ" محبوبه، لا يلتفت بعد اختباره، ولا يستبدل من أحب، وفيّ، لا يُبدل وجهته مهما مرّ من العمر ما مرّ.<br>
+                        ولأني منذ عرفتكِ، ما عاد في قلبي متّسع لفكرة أن تميل روحي ميلًا إلى غيركِ، ولا عاد هذا الفؤاد المتيم يعرف كيف يُسلّم نفسه ليدٍ ليست يدكِ.<br>
+                        أحبكِ على نحوٍ يفيض من عينَيّ أكثر مما يفيض من لساني.<br>
+                        في عينَيّ كلامٌ كثير عنكِ، وفي ارتباطي بكِ اعترافاتٌ لا تنتهي، وفي نظرتي إليكِ شيءٌ لا يحتاج إلى شرح، لأنه يشي بي كل مرة.<br>
+                        كأن هذا الحب لا يرضى أن يبقى ساكنًا في الداخل، فيخرج مني على هيئة تصرفات تعرفين جيدًا من أين جاءت.<br>
+                        وقلبي... يا حبيبتي...<br>
+                        يعود إليكِ كل مرة كأنه لم يعرف امرأة سواكِ، ويختاركِ مرة بعد مرة، وكأن الاختيار الأول لم يكن كافيًا، وكأنكِ كل يوم تستحقين أن تُختاري من جديد.<br>
+                        في كل مرة أظن أني بلغتُ معكِ أقصى المحبة، يبتدع قلبي لكِ بابًا آخر، وأجدني أحبكِ من جهة جديدة، وأتعلق بكِ على نحوٍ أعمق.<br>
+                        وأعرف أن هذا القلب كُتب عليه أن يظل وفيًا لشقاوته بكِ... حتى يفنى به العمر.
+                    </p>
+                </div>
+                <button class="lock-btn" onclick="lockApp()">إغلاق الظرف 🔒</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
